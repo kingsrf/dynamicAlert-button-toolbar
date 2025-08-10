@@ -1,24 +1,25 @@
-# Alert Button Toolbar
+# Dynamic Alert Button Toolbar
 
-A simple React application that demonstrates **props**, **children**, and **event handling** in React by creating a reusable `AlertButton` component and a `Toolbar` that renders multiple unique alert buttons.
-
----
+A React application demonstrating **props**, **children**, and **event handling** by creating a reusable `AlertButton` component and dynamically rendering multiple alert buttons from an array of configuration objects.
 
 ## Features
 - **Reusable Component**: `AlertButton` accepts `message` and `children` props.
-- **Dynamic Behavior**: Each button in the `Toolbar` displays a different alert message when clicked.
-- **Props + Event Handling**: Demonstrates how to pass data into components and respond to user actions.
+- **Dynamic Rendering**: `Toolbar` maps over an array of button properties to create multiple alert buttons.
+- **Custom Messages**: Each button displays its own unique alert message when clicked.
+- **Versatile Button Labels**: Button text is set via the `children` prop.
 - **Unit Tests**: Includes normal and edge case tests using **Jest** and **React Testing Library**.
 
----
+
+## 🗂 Project Structure
+
 
 ## Project Structure
 
 src/
 |– AlertButton.js # Reusable button component
-|– Toolbar.js # Renders multiple AlertButton components
+|– Toolbar.js # Renders multiple AlertButton components from an array
 |– App.js # Root application component
-|– App.test.js # Test cases for AlertButton & Toolbar
+|– Toolbar.test.js # Test cases for Toolbar & AlertButton
 |– index.js # Entry point
 
 
@@ -45,21 +46,22 @@ To run all tests:
 
 npm test
 
-Example Usage
+Example Usage Array
 
-Toolbar.js
+const buttons = [
+  { message: 'Downloading!', children: 'Download File' },
+  { message: 'Sharing!', children: 'Share Document' },
+  { message: 'Uploading!', children: 'Upload File' }
+];
 
-<AlertButton message="Hello from Button 1!">Greet</AlertButton>
-<AlertButton message="Warning! This is Button 2.">Warn</AlertButton>
-<AlertButton message="Goodbye from Button 3!">Farewell</AlertButton>
 
 Behavior:
 
-    Clicking Greet -> Alert: "Hello from Button 1!"
+    Clicking Downloading File -> Alert: "Downloading!"
 
-    Clicking Warn -> Alert: "Warning! This is Button 2."
+    Clicking Share Document -> Alert: "Sharing!"
 
-    Clicking Farewell –> Alert: "Goodbye from Button 3!"
+    Clicking Uploading File –> Alert: "Uploading!"
 
 Tech Stack
 

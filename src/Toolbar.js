@@ -1,11 +1,22 @@
 import AlertButton from "./AlertButton";
 
 export default function Toolbar() {
-    return (
-        <div style={{ display: 'flex', gap: '10px' }}>
-            <AlertButton message="Hello from Button 1!">Greet</AlertButton>
-            <AlertButton message="Warning! This is Button 2.">Warn</AlertButton>
-            <AlertButton message="Goodbye from Button 3!">Farewell</AlertButton>
-        </div>
-    );
+  const buttons = [
+    { message: "Downloading!", children: "Download File" },
+    { message: "Sharing!", children: "Share Document" },
+    { message: "Uploading!", children: "Upload File" },
+  ];
+
+  return (
+    <div style={{ display: "flex", gap: "10px" }}>
+      {buttons.map((btn, index) => (
+        <AlertButton
+          key={index}
+          message={btn.message}
+        >
+          {btn.children}
+        </AlertButton>
+      ))}
+    </div>
+  );
 }

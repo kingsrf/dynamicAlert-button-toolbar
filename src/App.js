@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Alert Button Toolbar</h1>
+      <h1> Dynamic Alert Button Toolbar</h1>
       <Toolbar />
     </div>
   );

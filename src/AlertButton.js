@@ -1,12 +1,8 @@
 
-export default function AlertButton({ message, children}) {
+export default function AlertButton({ message, children }) {
   const handleClick = () => {
     alert(message);
   };
 
-  return (
-    <button onClick={handleClick}>
-      {children}
-    </button>
-  );
+  return <button onClick={handleClick}>{children}</button>;
 }
