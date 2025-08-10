@@ -10,7 +10,7 @@ A React application demonstrating **props**, **children**, and **event handling*
 - **Unit Tests**: Includes normal and edge case tests using **Jest** and **React Testing Library**.
 
 
-## 🗂 Project Structure
+## Project Structure
 
 
 ## Project Structure
