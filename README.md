@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Alert Button Toolbar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application that demonstrates **props**, **children**, and **event handling** in React by creating a reusable `AlertButton` component and a `Toolbar` that renders multiple unique alert buttons.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
+- **Reusable Component**: `AlertButton` accepts `message` and `children` props.
+- **Dynamic Behavior**: Each button in the `Toolbar` displays a different alert message when clicked.
+- **Props + Event Handling**: Demonstrates how to pass data into components and respond to user actions.
+- **Unit Tests**: Includes normal and edge case tests using **Jest** and **React Testing Library**.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+src/
+|– AlertButton.js # Reusable button component
+|– Toolbar.js # Renders multiple AlertButton components
+|– App.js # Root application component
+|– App.test.js # Test cases for AlertButton & Toolbar
+|– index.js # Entry point
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### 1. Clone the repository
+```bash
+git clone <url-repo>
+cd alert-button-toolbar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server
 
-### `npm run eject`
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will run the app at http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ Running Tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run all tests:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm test
 
-## Learn More
+Example Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Toolbar.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<AlertButton message="Hello from Button 1!">Greet</AlertButton>
+<AlertButton message="Warning! This is Button 2.">Warn</AlertButton>
+<AlertButton message="Goodbye from Button 3!">Farewell</AlertButton>
 
-### Code Splitting
+Behavior:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Clicking Greet -> Alert: "Hello from Button 1!"
 
-### Analyzing the Bundle Size
+    Clicking Warn -> Alert: "Warning! This is Button 2."
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Clicking Farewell –> Alert: "Goodbye from Button 3!"
 
-### Making a Progressive Web App
+Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    React (via Create React App)
 
-### Advanced Configuration
+    JavaScript (ES6)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Jest & React Testing Library for testing
